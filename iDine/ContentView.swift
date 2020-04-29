@@ -23,7 +23,9 @@ struct ContentView: View {
                     Section(header: Text(section.name)) {
                         
                         ForEach(section.items) { item in
-                            Text(item.name)
+                            
+                            // insert view created in ItemRow.swift
+                            ItemRow(item: item)
                         }
                     }
                 }
