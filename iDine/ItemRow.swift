@@ -15,6 +15,8 @@ struct ItemRow: View {
     
     var body: some View {
         HStack {
+            // Bring in the detail view when the row is tapped and pass the item to the next view
+            NavigationLink(destination: ItemDetail(item: item)) {
             
             // Add thumbnail image
             Image(item.thumbnailImage)
@@ -41,11 +43,14 @@ struct ItemRow: View {
                     .foregroundColor(.white)
             }
         }
+        }
     }
 }
 
 struct ItemRow_Previews: PreviewProvider {
     static var previews: some View {
+
         ItemRow(item: MenuItem.example)
+
     }
 }
