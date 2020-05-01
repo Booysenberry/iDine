@@ -20,6 +20,7 @@
 		4B7949EA2458B0320040547B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7949E92458B0320040547B /* Helper.swift */; };
 		4B7949ED2458B0570040547B /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7949EB2458B0560040547B /* Menu.swift */; };
 		4B7949EE2458B0570040547B /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7949EC2458B0570040547B /* Order.swift */; };
+		4BE0A6C0245CC14A00316B04 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE0A6BF245CC14A00316B04 /* OrderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		4B7949E92458B0320040547B /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		4B7949EB2458B0560040547B /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		4B7949EC2458B0570040547B /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		4BE0A6BF245CC14A00316B04 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				4B7949D92458AFD40040547B /* ContentView.swift */,
 				4B72F16E245A01E30012987E /* ItemRow.swift */,
 				4B1F3C44245B5B7400DD8BF1 /* ItemDetail.swift */,
+				4BE0A6BF245CC14A00316B04 /* OrderView.swift */,
 				4B6901392459635A0086CA8E /* menu.json */,
 				4B7949EB2458B0560040547B /* Menu.swift */,
 				4B7949EC2458B0570040547B /* Order.swift */,
@@ -177,6 +180,7 @@
 				4B7949D52458AFD40040547B /* SceneDelegate.swift in Sources */,
 				4B7949EE2458B0570040547B /* Order.swift in Sources */,
 				4B72F16F245A01E30012987E /* ItemRow.swift in Sources */,
+				4BE0A6C0245CC14A00316B04 /* OrderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

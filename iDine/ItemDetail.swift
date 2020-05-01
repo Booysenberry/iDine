@@ -12,6 +12,9 @@ struct ItemDetail: View {
     
     var item: MenuItem
     
+    //Pass observable object
+    @EnvironmentObject var order: Order
+    
     var body: some View {
         
         VStack {
@@ -34,6 +37,11 @@ struct ItemDetail: View {
             // add padding around description text
                 .padding()
             
+            // Create button
+            Button("Order This") {
+                self.order.add(item: self.item) // Add function created in Order.swift
+            }.font(.headline)
+            
             // Push the content to the top of the view
             Spacer()
         }
@@ -42,10 +50,14 @@ struct ItemDetail: View {
 }
 
 struct ItemDetail_Previews: PreviewProvider {
+    
+    // Create a temporary order instance for preview to work. Replicates the same in scene delegate
+    static let order = Order()
+    
     static var previews: some View {
         // Preview doesn't know it's in a navigation view so add it here to see the nav bar in the preview
         NavigationView {
-        ItemDetail(item: MenuItem.example)
+            ItemDetail(item: MenuItem.example).environmentObject(order)
         }
     }
 }
