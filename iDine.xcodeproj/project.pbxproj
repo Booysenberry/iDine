@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B130AFF245F45D900B78188 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B130AFE245F45D900B78188 /* AppView.swift */; };
+		4B130B05245F534700B78188 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B130B04245F534700B78188 /* CheckoutView.swift */; };
 		4B1F3C45245B5B7400DD8BF1 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1F3C44245B5B7400DD8BF1 /* ItemDetail.swift */; };
 		4B69013A2459635A0086CA8E /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 4B6901392459635A0086CA8E /* menu.json */; };
 		4B72F16F245A01E30012987E /* ItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B72F16E245A01E30012987E /* ItemRow.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		4B130AFE245F45D900B78188 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		4B130B04245F534700B78188 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		4B1F3C44245B5B7400DD8BF1 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		4B6901392459635A0086CA8E /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 		4B72F16E245A01E30012987E /* ItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRow.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				4B130AFE245F45D900B78188 /* AppView.swift */,
 				4B1F3C44245B5B7400DD8BF1 /* ItemDetail.swift */,
 				4BE0A6BF245CC14A00316B04 /* OrderView.swift */,
+				4B130B04245F534700B78188 /* CheckoutView.swift */,
 				4B6901392459635A0086CA8E /* menu.json */,
 				4B7949EB2458B0560040547B /* Menu.swift */,
 				4B7949EC2458B0570040547B /* Order.swift */,
@@ -176,6 +179,7 @@
 			files = (
 				4B7949ED2458B0570040547B /* Menu.swift in Sources */,
 				4B7949D32458AFD40040547B /* AppDelegate.swift in Sources */,
+				4B130B05245F534700B78188 /* CheckoutView.swift in Sources */,
 				4B7949D82458AFD40040547B /* iDine.xcdatamodeld in Sources */,
 				4B7949EA2458B0320040547B /* Helper.swift in Sources */,
 				4B130AFF245F45D900B78188 /* AppView.swift in Sources */,
