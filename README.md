@@ -14,7 +14,7 @@ Open Terminal
 
 Run `git clone https://github.com/Booysenberry/iDine.git`
 
-Open `racecalc.xcodeproj`
+Open `idine.xcodeproj`
 
 Build and run
 
