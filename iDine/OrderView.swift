@@ -27,7 +27,8 @@ struct OrderView: View {
                 }
                 
                 Section {
-                    NavigationLink(destination: Text("Check out")) {
+                    // Move to CheckoutView
+                    NavigationLink(destination: CheckoutView()) {
                         Text("Place Order")
                     }
                 }
