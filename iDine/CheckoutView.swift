@@ -15,11 +15,18 @@ struct CheckoutView: View {
     static let paymentTypes = ["Cash", "Credit Card", "iDine Points"]
     static let tipAmounts = [10, 15, 20, 25, 0]
     
-    // bind picker to a property to re-invoke the body property if another option is selected
+    // 2-way binding - reinvokes body if data changes
     @State private var paymentType = 0
     @State private var addLoyaltyDetails = false
     @State private var loyaltyNumber = ""
     @State private var tipAmount = 1
+    @State private var showpaymentAlert = false
+    
+    var totalPrice: Double {
+        let total = Double(order.total)
+        let tipValue = total / 100 * Double(Self.tipAmounts[tipAmount])
+        return total + tipValue
+    }
     
     var body: some View {
         
@@ -38,7 +45,6 @@ struct CheckoutView: View {
                         Text(Self.paymentTypes[$0])
                     }
                 }
-                
                 
                 // Add toggle and bind to addLoyaltyDetails
                 Toggle(isOn: $addLoyaltyDetails) {
@@ -63,13 +69,20 @@ struct CheckoutView: View {
             }
             
             // Add new Section and Button
-            Section(header: Text("Total: $100")) {
+            Section(header: Text("Total: $\(totalPrice, specifier: "%.2f")")) {
                 Button("Confirm Order" ) {
-                    // Place order
+                    
+                    // Toggle bool / alert
+                    self.showpaymentAlert.toggle()
                 }
             }
         }
         .navigationBarTitle(Text("Payment"), displayMode: .inline)
+        .alert(isPresented: $showpaymentAlert) {
+            
+            // Show alert
+            Alert(title: Text("Confirm Order"), message: Text("You total is $\(totalPrice, specifier: "%.2f") - thank you!"), dismissButton: .default(Text("Ok")))
+        }
     }
 }
 
