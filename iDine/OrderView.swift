@@ -14,6 +14,7 @@ struct OrderView: View {
     @EnvironmentObject var order: Order
     
     var body: some View {
+        
         NavigationView {
             List {
                 Section {
@@ -23,19 +24,24 @@ struct OrderView: View {
                             Spacer()
                             Text("$\(item.price)")
                         }
-                    }
+                    }.onDelete(perform: deleteItems)
                 }
                 
                 Section {
-                    // Move to CheckoutView
                     NavigationLink(destination: CheckoutView()) {
                         Text("Place Order")
                     }
-                }
+                }.disabled(order.items.isEmpty) // Disable/hide section if order is empty
             }
             .navigationBarTitle("Order")
             .listStyle(GroupedListStyle())
+            .navigationBarItems(trailing: EditButton()) // Add edit button to nav bar
         }
+    }
+    
+    // Delete item from order
+    func deleteItems(at offsets: IndexSet) {
+        order.items.remove(atOffsets: offsets)
     }
 }
 

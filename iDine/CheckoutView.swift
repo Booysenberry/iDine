@@ -69,12 +69,20 @@ struct CheckoutView: View {
             }
             
             // Add new Section and Button
-            Section(header: Text("Total: $\(totalPrice, specifier: "%.2f")")) {
-                Button("Confirm Order" ) {
-                    
+            Section(header: Text("Total: $\(totalPrice, specifier: "%.2f")")
+                .font(.largeTitle)
+            ){
+                Button("Confirm Order" )
+                {
                     // Toggle bool / alert
                     self.showpaymentAlert.toggle()
                 }
+                .padding()
+                .font(.subheadline)
+                .foregroundColor(.white) // Font colour
+                .background(Color(.red)) // Button background
+                .cornerRadius(5) // Rounded corners
+            
             }
         }
         .navigationBarTitle(Text("Payment"), displayMode: .inline)
