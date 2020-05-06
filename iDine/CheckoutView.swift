@@ -14,6 +14,7 @@ struct CheckoutView: View {
     
     static let paymentTypes = ["Cash", "Credit Card", "iDine Points"]
     static let tipAmounts = [10, 15, 20, 25, 0]
+    static let pickupTimes = ["Now", "Tonight", "Tomorrow"]
     
     // 2-way binding - reinvokes body if data changes
     @State private var paymentType = 0
@@ -21,6 +22,7 @@ struct CheckoutView: View {
     @State private var loyaltyNumber = ""
     @State private var tipAmount = 1
     @State private var showpaymentAlert = false
+    @State private var pickupTime = 0
     
     var totalPrice: Double {
         let total = Double(order.total)
@@ -54,6 +56,16 @@ struct CheckoutView: View {
                 if addLoyaltyDetails {
                     // Bind input to loyaltyNumber
                     TextField("Enter your iDine ID", text: $loyaltyNumber)
+                }
+            }
+            
+            Section {
+                // Add pickup time picker 
+                Picker("Pickup Time", selection: $pickupTime) {
+                    
+                    ForEach(0 ..< Self.pickupTimes.count) {
+                        Text("\(Self.pickupTimes[$0])")
+                    }
                 }
             }
             
