@@ -14,7 +14,7 @@ Open Terminal
 
 Run `git clone https://github.com/Booysenberry/iDine.git`
 
-Open `idine.xcodeproj`
+Open `iDine.xcodeproj`
 
 Build and run
 
